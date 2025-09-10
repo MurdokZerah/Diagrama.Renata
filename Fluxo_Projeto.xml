@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net">
+  <diagram name="Fluxograma Gerenciamento de Projetos UML" id="projetos-uml">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <mxCell id="gerente" value="Gerente de Projeto" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
+          <mxGeometry x="50" y="50" width="30" height="60" as="geometry" />
+        </mxCell>
+
+        <mxCell id="desenvolvedor" value="Desenvolvedor" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
+          <mxGeometry x="50" y="150" width="30" height="60" as="geometry" />
+        </mxCell>
+
+        <mxCell id="cliente" value="Cliente" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
+          <mxGeometry x="50" y="250" width="30" height="60" as="geometry" />
+        </mxCell>
+
+        <mxCell id="criarProjeto" value="Criar Projeto" style="ellipse;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="200" y="50" width="140" height="60" as="geometry" />
+        </mxCell>
+
+        <mxCell id="atribuirTarefa" value="Atribuir Tarefa" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="200" y="130" width="140" height="60" as="geometry" />
+        </mxCell>
+
+        <mxCell id="acompanharProgresso" value="Acompanhar Progresso" style="ellipse;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="200" y="210" width="160" height="60" as="geometry" />
+        </mxCell>
+
+        <mxCell id="relatarProblema" value="Relatar Problema" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="200" y="290" width="140" height="60" as="geometry" />
+        </mxCell>
+
+        <mxCell id="revisarProjeto" value="Revisar Projeto" style="ellipse;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="200" y="370" width="140" height="60" as="geometry" />
+        </mxCell>
+
+        <mxCell id="edge1" edge="1" parent="1" source="gerente" target="criarProjeto"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="edge2" edge="1" parent="1" source="gerente" target="atribuirTarefa"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="edge3" edge="1" parent="1" source="gerente" target="acompanharProgresso"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="edge4" edge="1" parent="1" source="desenvolvedor" target="acompanharProgresso"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="edge5" edge="1" parent="1" source="desenvolvedor" target="relatarProblema"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="edge6" edge="1" parent="1" source="cliente" target="revisarProjeto"><mxGeometry relative="1" as="geometry" /></mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
