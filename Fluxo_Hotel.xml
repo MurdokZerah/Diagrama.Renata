@@ -1,66 +1,87 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <mxfile host="app.diagrams.net">
-  <diagram name="Fluxograma Sistema de Reservas de Hotel" id="hotel-reservas">
-    <mxGraphModel dx="1434" dy="756" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+  <diagram name="Fluxograma Sistema de Reservas com Atores" id="hotel-reservas-atores">
+    <mxGraphModel dx="1434" dy="756" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        
-        <mxCell id="start" value="Início" style="ellipse;shape=ellipse;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
-          <mxGeometry x="340" y="20" width="120" height="60" as="geometry" />
+
+        <mxCell id="clienteLane" value="Cliente" style="swimlane;childLayout=stackLayout;horizontal=0;startSize=30;" vertex="1" parent="1">
+          <mxGeometry x="0" y="0" width="250" height="800" as="geometry" />
         </mxCell>
 
-        <mxCell id="menu" value="Selecionar Ação (Cliente/Recepcionista/Gerente)" style="rectangle;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
-          <mxGeometry x="280" y="120" width="240" height="80" as="geometry" />
-        </mxCell>
-        <mxCell id="edge1" edge="1" parent="1" source="start" target="menu">
-          <mxGeometry relative="1" as="geometry" />
+        <mxCell id="recepcionistaLane" value="Recepcionista" style="swimlane;childLayout=stackLayout;horizontal=0;startSize=30;" vertex="1" parent="1">
+          <mxGeometry x="250" y="0" width="250" height="800" as="geometry" />
         </mxCell>
 
-        <mxCell id="reserva" value="Realizar Reserva" style="rectangle;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
-          <mxGeometry x="40" y="260" width="160" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="edge2" edge="1" parent="1" source="menu" target="reserva">
-          <mxGeometry relative="1" as="geometry"><mxPoint x="0" y="0" as="targetPoint"/></mxGeometry>
+        <mxCell id="gerenteLane" value="Gerente" style="swimlane;childLayout=stackLayout;horizontal=0;startSize=30;" vertex="1" parent="1">
+          <mxGeometry x="500" y="0" width="250" height="800" as="geometry" />
         </mxCell>
 
-        <mxCell id="cancelar" value="Cancelar Reserva" style="rectangle;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
-          <mxGeometry x="260" y="260" width="160" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="edge3" edge="1" parent="1" source="menu" target="cancelar">
-          <mxGeometry relative="1" as="geometry" />
+        <mxCell id="sistemaLane" value="Sistema" style="swimlane;childLayout=stackLayout;horizontal=0;startSize=30;" vertex="1" parent="1">
+          <mxGeometry x="750" y="0" width="350" height="800" as="geometry" />
         </mxCell>
 
-        <mxCell id="verificar" value="Verificar Disponibilidade" style="rectangle;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
-          <mxGeometry x="480" y="260" width="200" height="60" as="geometry" />
+        <mxCell id="clienteReserva" value="Solicitar Reserva" style="rectangle;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="clienteLane">
+          <mxGeometry x="20" y="60" width="180" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="edge4" edge="1" parent="1" source="menu" target="verificar">
-          <mxGeometry relative="1" as="geometry" />
+        <mxCell id="clienteCancelar" value="Solicitar Cancelamento" style="rectangle;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="clienteLane">
+          <mxGeometry x="20" y="140" width="180" height="50" as="geometry" />
         </mxCell>
-
-        <mxCell id="gerenciar" value="Gerenciar Reservas" style="rectangle;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
-          <mxGeometry x="140" y="380" width="200" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="edge5" edge="1" parent="1" source="menu" target="gerenciar">
-          <mxGeometry relative="1" as="geometry" />
+        <mxCell id="clienteDisponibilidade" value="Verificar Disponibilidade" style="rectangle;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="clienteLane">
+          <mxGeometry x="20" y="220" width="180" height="50" as="geometry" />
         </mxCell>
 
-        <mxCell id="atualizar" value="Atualizar Informações do Cliente" style="rectangle;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
-          <mxGeometry x="380" y="380" width="240" height="60" as="geometry" />
+        <mxCell id="recepReserva" value="Registrar Reserva" style="rectangle;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="recepcionistaLane">
+          <mxGeometry x="20" y="60" width="180" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="edge6" edge="1" parent="1" source="menu" target="atualizar">
-          <mxGeometry relative="1" as="geometry" />
+        <mxCell id="recepCancelar" value="Cancelar Reserva" style="rectangle;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="recepcionistaLane">
+          <mxGeometry x="20" y="140" width="180" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="recepGerenciar" value="Gerenciar Reservas" style="rectangle;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="recepcionistaLane">
+          <mxGeometry x="20" y="220" width="180" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="recepAtualizar" value="Atualizar Cliente" style="rectangle;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="recepcionistaLane">
+          <mxGeometry x="20" y="300" width="180" height="50" as="geometry" />
         </mxCell>
 
-        <mxCell id="end" value="Fim" style="ellipse;shape=ellipse;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
-          <mxGeometry x="340" y="520" width="120" height="60" as="geometry" />
+        <mxCell id="gerenteGerenciar" value="Gerenciar Reservas" style="rectangle;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="gerenteLane">
+          <mxGeometry x="20" y="60" width="180" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="gerenteAtualizar" value="Atualizar Cliente" style="rectangle;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="gerenteLane">
+          <mxGeometry x="20" y="140" width="180" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="gerenteDisponibilidade" value="Verificar Disponibilidade" style="rectangle;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="gerenteLane">
+          <mxGeometry x="20" y="220" width="180" height="50" as="geometry" />
         </mxCell>
 
-        <mxCell id="edge7" edge="1" parent="1" source="reserva" target="end"><mxGeometry relative="1" as="geometry"/></mxCell>
-        <mxCell id="edge8" edge="1" parent="1" source="cancelar" target="end"><mxGeometry relative="1" as="geometry"/></mxCell>
-        <mxCell id="edge9" edge="1" parent="1" source="verificar" target="end"><mxGeometry relative="1" as="geometry"/></mxCell>
-        <mxCell id="edge10" edge="1" parent="1" source="gerenciar" target="end"><mxGeometry relative="1" as="geometry"/></mxCell>
-        <mxCell id="edge11" edge="1" parent="1" source="atualizar" target="end"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="sistemaDisponibilidade" value="Checar Disponibilidade" style="rectangle;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="sistemaLane">
+          <mxGeometry x="20" y="60" width="240" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="sistemaReserva" value="Confirmar/Negar Reserva" style="rectangle;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="sistemaLane">
+          <mxGeometry x="20" y="140" width="240" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="sistemaCancelamento" value="Cancelar Reserva no Banco" style="rectangle;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="sistemaLane">
+          <mxGeometry x="20" y="220" width="240" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="sistemaGerenciar" value="Exibir / Alterar Reservas" style="rectangle;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="sistemaLane">
+          <mxGeometry x="20" y="300" width="240" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="sistemaAtualizar" value="Salvar Informações do Cliente" style="rectangle;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="sistemaLane">
+          <mxGeometry x="20" y="380" width="240" height="50" as="geometry" />
+        </mxCell>
+
+        <mxCell id="edge1" edge="1" parent="1" source="clienteReserva" target="sistemaDisponibilidade"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="edge2" edge="1" parent="1" source="recepReserva" target="sistemaDisponibilidade"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="edge3" edge="1" parent="1" source="sistemaDisponibilidade" target="sistemaReserva"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="edge4" edge="1" parent="1" source="clienteCancelar" target="sistemaCancelamento"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="edge5" edge="1" parent="1" source="recepCancelar" target="sistemaCancelamento"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="edge6" edge="1" parent="1" source="recepGerenciar" target="sistemaGerenciar"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="edge7" edge="1" parent="1" source="gerenteGerenciar" target="sistemaGerenciar"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="edge8" edge="1" parent="1" source="recepAtualizar" target="sistemaAtualizar"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="edge9" edge="1" parent="1" source="gerenteAtualizar" target="sistemaAtualizar"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="edge10" edge="1" parent="1" source="clienteDisponibilidade" target="sistemaDisponibilidade"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="edge11" edge="1" parent="1" source="gerenteDisponibilidade" target="sistemaDisponibilidade"><mxGeometry relative="1" as="geometry" /></mxCell>
 
       </root>
     </mxGraphModel>
